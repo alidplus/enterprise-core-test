@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "lib": [
+      "ES2023"
+    ],
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "vite.config.ts"
+  ]
+}

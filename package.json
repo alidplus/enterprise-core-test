@@ -7,8 +7,10 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "dev": "yarn workspace @core/app dev"
+  },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.3"
   }
 }
