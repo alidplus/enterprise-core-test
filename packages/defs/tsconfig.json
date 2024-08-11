@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "lib": [
+      "ES2020"
+    ]
+  },
+  "include": [
+    "common",
+    "modules"
+  ]
+}

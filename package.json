@@ -1,0 +1,14 @@
+{
+  "name": "enterprise-core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
