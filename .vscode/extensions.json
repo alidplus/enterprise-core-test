@@ -1,6 +1,9 @@
 {
   "recommendations": [
     "yzhang.markdown-all-in-one",
-    "burkeholland.simple-react-snippets"
+    "burkeholland.simple-react-snippets",
+    "formulahendry.auto-rename-tag",
+    "bradlc.vscode-tailwindcss",
+    "tombonnike.vscode-status-bar-format-toggle"
   ]
 }

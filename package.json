@@ -8,9 +8,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn workspace @core/app dev"
+    "dev": "yarn workspace @core/app dev",
+    "format": "prettier . --write"
   },
   "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "typescript": "^5.5.3"
   }
 }
