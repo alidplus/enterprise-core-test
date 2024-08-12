@@ -1,8 +1,9 @@
 # Task list
 
 ## Initial tasks
-- [ ] Init UI using TailwindCSS+NextUI
+- [x] Init UI using TailwindCSS+NextUI
 - [ ] Design dry UI
+- [ ] atomic design system
 
 
 ## Mission tasks:
@@ -16,3 +17,8 @@
 - [ ] One UI component will render a react-flow diagram with custom nodes that embed sub-diagram
 
 ## Extra taks:
+- [ ] tests
+- [ ] formatter
+  - [ ] pritter
+  - [ ] eslint
+- [ ] dark mode
