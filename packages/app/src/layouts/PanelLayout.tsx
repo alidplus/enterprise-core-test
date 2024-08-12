@@ -6,42 +6,22 @@ import {
   DropdownTrigger,
   Navbar,
   NavbarBrand,
-  NavbarContent,
-  NavbarMenuToggle,
+  NavbarContent
 } from '@nextui-org/react'
-import { Fragment, PropsWithChildren, useState } from 'react'
+import { Fragment, Suspense } from 'react'
+import { Outlet, useLoaderData } from 'react-router-dom'
+import BrandLoading from '../components/Loading'
 import { UserCard } from '../components/UserCard'
-import * as Icons from '../components/icons'
-import { Sidebar, SidebarMenu } from '../components/sidebar'
+import { Sidebar } from '../components/sidebar'
+import { LayoutData } from '../types/loader'
 
-const sidebarData: SidebarMenu = {
-  links: [
-    { label: 'Dashboard', icon: Icons.DashboardIcon },
-    { label: 'Users', icon: Icons.UserIcon },
-  ],
-  groups: [
-    {
-      label: 'Profile Overview',
-      links: [
-        { label: 'Messages', icon: Icons.MessageIcon },
-        { label: 'Security', icon: Icons.SecurityIcon },
-        { label: 'Settings', icon: Icons.SettingsIcon },
-        { label: 'Notifications', icon: Icons.NotificationsIcon },
-        { label: 'Passwords', icon: Icons.PasswordsIcon },
-        { label: 'Goals', icon: Icons.GoalsIcon },
-      ],
-    },
-  ],
+function useLayoutData(): LayoutData {
+  const data = useLoaderData()
+  return data as LayoutData
 }
 
-const userDate = {
-  name: 'Alexis Enache',
-  email: 'alexis81@gmail.com',
-  avatar: 'https://i.ibb.co/L1LQtBm/Ellipse-1.png',
-}
-
-export function PanelLayout({ children }: PropsWithChildren) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export default function PanelLayout() {
+  const { sidebarData, userData } = useLayoutData()
 
   return (
     <Fragment>
@@ -64,15 +44,15 @@ export function PanelLayout({ children }: PropsWithChildren) {
                 as="button"
                 className="transition-transform"
                 color="secondary"
-                name="Jason Hughes"
+                name={userData.name}
                 size="sm"
-                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                src={userData.avatar}
               />
             </DropdownTrigger>
             <DropdownMenu aria-label="Profile Actions" variant="flat">
               <DropdownItem key="profile" className="h-14 gap-2">
-                <p className="font-semibold">Signed in as</p>
-                <p className="font-semibold">zoey@example.com</p>
+                <p className="">Signed in as</p>
+                <p className="font-semibold">{userData.email}</p>
               </DropdownItem>
               <DropdownItem key="settings">My Settings</DropdownItem>
               <DropdownItem key="team_settings">Team Settings</DropdownItem>
@@ -91,9 +71,13 @@ export function PanelLayout({ children }: PropsWithChildren) {
       </Navbar>
       <div className="flex h-[calc(100dvh_-_4rem_-_1px)]">
         <Sidebar {...sidebarData} visible>
-          <UserCard user={userDate} />
+          <UserCard user={userData} />
         </Sidebar>
-        <div className="w-full overflow-y-auto p-5">{children}</div>
+        <div className="relative w-full overflow-y-auto p-5">
+          <Suspense fallback={<BrandLoading />}>
+            <Outlet />
+          </Suspense>
+        </div>
       </div>
     </Fragment>
   )

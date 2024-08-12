@@ -1,15 +1,10 @@
 import clsx from 'clsx'
-import { ComponentType, PropsWithChildren, useState } from 'react'
+import { PropsWithChildren, useState } from 'react'
 import { ChevronUpIcon } from '../components/icons'
 
+import { useNavigate } from 'react-router-dom'
 import { tv } from 'tailwind-variants'
-
-interface MenuItem {
-  label: string
-  main?: true
-  onClick?: () => void
-  icon?: ComponentType
-}
+import { MenuGroup, MenuItem, SidebarMenu } from '../types/sidebar'
 
 const menuButton = tv({
   base: 'flex w-full items-center space-x-6 rounded justify-start',
@@ -24,21 +19,19 @@ const menuButton = tv({
 
 export function MenuLink(props: MenuItem) {
   const Icon = props.icon
+  const navigate = useNavigate()
+  const handleClick = () => {
+    if (props.uri) navigate(props.uri)
+  }
   return (
     <button
-      onClick={props.onClick}
+      onClick={props.onClick ?? handleClick}
       className={menuButton({ isMain: props.main })}
     >
       {Icon ? <Icon /> : null}
       <p className="text-base leading-4">{props.label}</p>
     </button>
   )
-}
-
-export interface MenuGroup {
-  label: string
-  default?: true
-  links: MenuItem[]
 }
 
 export function SidebarMenuGroup(props: MenuGroup) {
@@ -64,11 +57,6 @@ export function SidebarMenuGroup(props: MenuGroup) {
       </div>
     </div>
   )
-}
-
-export interface SidebarMenu {
-  links: MenuItem[]
-  groups: MenuGroup[]
 }
 
 interface SidebarProps extends SidebarMenu {

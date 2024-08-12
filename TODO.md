@@ -6,6 +6,7 @@
 - [x] Design dry UI
 - [ ] atomic design system
 - [ ] integrate redux
+- [x] integrate router
 - [ ] mock api using ???
 
 ## Mission tasks:

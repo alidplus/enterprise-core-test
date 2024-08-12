@@ -1,12 +1,8 @@
-import React from 'react'
 import * as Icons from './icons'
+import { UserData } from '../types/user'
 
 interface UserCardProps {
-  user: {
-    name: string
-    email: string
-    avatar: string
-  }
+  user: UserData
 }
 
 export function UserCard(props: UserCardProps) {
