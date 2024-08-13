@@ -7,7 +7,7 @@ export default function Security() {
       <CardBody>
         <CardHeader className="flex gap-3">
           <div className="flex justify-center gap-1 align-middle">
-            <LazyIcon name='Security' />
+            <LazyIcon name="Security" />
             <h3 className="text-xl font-bold">Security</h3>
           </div>
         </CardHeader>

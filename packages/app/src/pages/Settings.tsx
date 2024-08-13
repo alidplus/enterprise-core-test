@@ -7,7 +7,7 @@ export default function Settings() {
       <CardBody>
         <CardHeader className="flex gap-3">
           <div className="flex justify-center gap-1 align-middle">
-            <LazyIcon name='Settings' />
+            <LazyIcon name="Settings" />
             <h3 className="text-xl font-bold">Settings</h3>
           </div>
         </CardHeader>

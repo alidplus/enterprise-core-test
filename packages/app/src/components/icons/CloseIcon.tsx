@@ -1,7 +1,11 @@
-import { IconSvgProps } from './type';
+import { IconSvgProps } from './type'
 
 const CloseIcon = ({
-  fill = 'currentColor', size, height, width, ...props
+  fill = 'currentColor',
+  size,
+  height,
+  width,
+  ...props
 }: IconSvgProps) => {
   return (
     <svg
@@ -25,16 +29,18 @@ const CloseIcon = ({
           stroke="white"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M6 6L18 18"
           stroke="white"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
-  );
-};
+  )
+}
 
 export default CloseIcon

@@ -15,7 +15,11 @@ import { UserCard } from '../components/UserCard'
 import { Sidebar } from '../components/Sidebar'
 import { LayoutRouterData } from '../types/loader'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { bindMenu, selectSidebarGroups, selectSidebarLinks } from '../store/slices/sidebar'
+import {
+  bindMenu,
+  selectSidebarGroups,
+  selectSidebarLinks,
+} from '../store/slices/sidebar'
 
 function useLayoutData(): LayoutRouterData {
   const data = useLoaderData()
@@ -27,9 +31,8 @@ export default function PanelLayout() {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(bindMenu({ key: "@@APP", menu: sidebarData }))
+    dispatch(bindMenu({ key: '@@APP', menu: sidebarData }))
   }, [sidebarData])
-
 
   return (
     <Fragment>
@@ -52,7 +55,7 @@ export default function PanelLayout() {
                 as="button"
                 className="transition-transform"
                 color="secondary"
-                name={userData.name}
+                name={userData.fullName}
                 size="sm"
                 src={userData.avatar}
               />

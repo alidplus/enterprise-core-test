@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
 export const Camera = lazy(async () => import('./CameraIcon'))
 export const ChevronUp = lazy(async () => import('./ChevronUpIcon'))

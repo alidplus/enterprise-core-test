@@ -14,14 +14,14 @@ export function UserCard(props: UserCardProps) {
         </div>
         <div className="flex flex-col items-start justify-start">
           <p className="cursor-pointer text-sm leading-5 text-white">
-            {props.user.name}
+            {props.user.fullName}
           </p>
           <p className="cursor-pointer text-xs leading-3 text-gray-300">
             {props.user.email}
           </p>
         </div>
       </div>
-      <LazyIcon name='Config' />
+      <LazyIcon name="Config" />
     </div>
   )
 }

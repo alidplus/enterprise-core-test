@@ -4,11 +4,10 @@ import _ from 'lodash'
 import { SidebarMenu } from '../types/sidebar'
 
 const pathBluePrintData: UserData = {
-  name: 'Alexis Enache',
+  fullName: 'Alexis Enache',
   email: 'alexis81@gmail.com',
   avatar: 'https://i.ibb.co/L1LQtBm/Ellipse-1.png',
 }
-
 
 const moduleAMockSidebar: SidebarMenu = {
   links: [],
@@ -24,38 +23,52 @@ const moduleAMockSidebar: SidebarMenu = {
   ],
 }
 
-const moduleBMockSidebar: SidebarMenu = {
+const registrationModuleSidebar: SidebarMenu = {
   links: [],
   groups: [
     {
-      label: 'Module B',
+      label: 'Registration',
       links: [
-        { label: 'call to action', uri: '/module-b/cta' },
+        { label: 'Register as person', uri: '/register' },
+        { label: 'Register as company', uri: '/register/2' },
       ],
     },
   ],
 }
 
-
 export async function getPathBluePrint(
   path: string
 ): Promise<PathBluePrint | null> {
-  const moduleUri = path.split('/').filter(p => !!p).shift()
+  const [moduleUri, version = ''] = path.split('/').filter((p) => !!p)
 
   if (moduleUri === 'module-a')
     return {
       path,
-      module: { t: 'moduleA', c: { title: 'hello from module A', sidebar: moduleAMockSidebar } },
+      module: {
+        t: 'moduleA',
+        c: {
+          label: 'hello from module A',
+          sidebar: moduleAMockSidebar,
+          version,
+        },
+      },
     }
   else if (moduleUri === 'module-b')
     return {
       path,
-      module: { t: 'moduleB', c: { title: 'hello from module B', sidebar: moduleBMockSidebar } },
+      module: { t: 'moduleB', c: { label: 'hello from module B', version } },
     }
-  else if (moduleUri === 'module-c')
+  else if (moduleUri === 'register')
     return {
       path,
-      module: { t: 'moduleC', c: { title: 'hello from module C' } },
+      module: {
+        t: 'registrationFormModule',
+        c: {
+          label: 'Registration Form',
+          sidebar: registrationModuleSidebar,
+          version,
+        },
+      },
     }
 
   return null

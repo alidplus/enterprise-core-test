@@ -1,6 +1,12 @@
-import { IconSvgProps } from './type';
+import { IconSvgProps } from './type'
 
-const EmptyIcon = ({ fill = 'currentColor', size, height, width, ...props }: IconSvgProps) => {
+const EmptyIcon = ({
+  fill = 'currentColor',
+  size,
+  height,
+  width,
+  ...props
+}: IconSvgProps) => {
   return (
     <svg
       data-name="Iconly/Curved/Profile"
@@ -9,9 +15,8 @@ const EmptyIcon = ({ fill = 'currentColor', size, height, width, ...props }: Ico
       width={size || width || 24}
       height={size || height || 24}
       {...props}
-    >
-    </svg>
-  );
-};
+    ></svg>
+  )
+}
 
 export default EmptyIcon

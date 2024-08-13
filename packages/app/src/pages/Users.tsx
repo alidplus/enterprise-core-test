@@ -7,7 +7,7 @@ export default function Users() {
       <CardBody>
         <CardHeader className="flex gap-3">
           <div className="flex justify-center gap-1 align-middle">
-            <LazyIcon name='User' />
+            <LazyIcon name="User" />
             <h3 className="text-xl font-bold">Users</h3>
           </div>
         </CardHeader>

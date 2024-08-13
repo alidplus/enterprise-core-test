@@ -7,7 +7,7 @@ export default function Messages() {
       <CardBody>
         <CardHeader className="flex gap-3">
           <div className="flex justify-center gap-1 align-middle">
-            <LazyIcon name='Message' />
+            <LazyIcon name="Message" />
             <h3 className="text-xl font-bold">Messages</h3>
           </div>
         </CardHeader>

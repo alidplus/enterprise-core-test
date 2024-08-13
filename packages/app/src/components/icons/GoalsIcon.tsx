@@ -1,7 +1,11 @@
-import { IconSvgProps } from './type';
+import { IconSvgProps } from './type'
 
 const GoalsIcon = ({
-  fill = 'currentColor', size, height, width, ...props
+  fill = 'currentColor',
+  size,
+  height,
+  width,
+  ...props
 }: IconSvgProps) => {
   return (
     <svg
@@ -25,22 +29,25 @@ const GoalsIcon = ({
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M10 21V3"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M10 4L19 8L10 12"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
-  );
-};
+  )
+}
 
 export default GoalsIcon

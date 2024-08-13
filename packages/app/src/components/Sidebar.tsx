@@ -5,7 +5,10 @@ import { useNavigate } from 'react-router-dom'
 import { tv } from 'tailwind-variants'
 import { MenuGroup, MenuItem, SidebarMenu } from '../types/sidebar'
 import { useAppSelector } from '../store/hooks'
-import { selectSidebarLinks, selectSidebarGroups } from '../store/slices/sidebar'
+import {
+  selectSidebarLinks,
+  selectSidebarGroups,
+} from '../store/slices/sidebar'
 import ChevronUpIcon from './icons/ChevronUpIcon'
 import LazyIcon from './icons/LazyIcon'
 
@@ -14,7 +17,7 @@ const menuButton = tv({
   variants: {
     isMain: {
       false:
-        'focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-white md:w-52 px-3 py-2 text-gray-400',
+        'focus:bg-gray-700 focus:text-white hover:bg-gray-700 hover:text-white md:w-60 px-3 py-2 text-gray-400',
       true: 'focus:outline-none text-white focus:text-indigo-400',
     },
   },

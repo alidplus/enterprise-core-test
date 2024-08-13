@@ -1,7 +1,11 @@
-import { IconSvgProps } from './type';
+import { IconSvgProps } from './type'
 
 const PasswordsIcon = ({
-  fill = 'currentColor', size, height, width, ...props
+  fill = 'currentColor',
+  size,
+  height,
+  width,
+  ...props
 }: IconSvgProps) => {
   return (
     <svg
@@ -25,22 +29,25 @@ const PasswordsIcon = ({
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M8 11V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609 3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V11"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
-  );
-};
+  )
+}
 
 export default PasswordsIcon

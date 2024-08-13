@@ -1,7 +1,7 @@
 import { ComponentType } from 'react'
 import { ModuleAConfig } from './ModuleA/config'
 import { ModuleBConfig } from './ModuleB/config'
-import { ModuleCConfig } from './ModuleC/config'
+import { RegistrationFormModuleConfig } from './RegistrationForm/config'
 
 import * as moduleDefs from '.'
 import { SidebarMenu } from '../types/sidebar'
@@ -15,9 +15,10 @@ export interface ModuleDefinationBase {
 
 export interface ModuleConfigBase {
   sidebar?: SidebarMenu
+  version?: string
 }
 
-export interface ModuleComputedProps { }
+export interface ModuleComputedProps {}
 
 export interface ModuleComponentProps<C extends ModuleConfigBase>
   extends ModuleComputedProps {
@@ -27,19 +28,20 @@ export interface ModuleComponentProps<C extends ModuleConfigBase>
 export interface ModuleDefination<C extends ModuleConfigBase>
   extends ModuleDefinationBase {
   Component: ComponentType<ModuleComponentProps<C>>
+  defaultConfig: C
 }
 
 export type ModuleConfig<MN extends ModuleNames> = MN extends 'moduleA'
   ? ModuleAConfig
   : MN extends 'moduleB'
-  ? ModuleBConfig
-  : MN extends 'moduleC'
-  ? ModuleCConfig
-  : never
+    ? ModuleBConfig
+    : MN extends 'registrationFormModule'
+      ? RegistrationFormModuleConfig
+      : never
 
 export interface ModuleBluePrint<MN extends ModuleNames = ModuleNames> {
   t: MN
-  c: ModuleConfig<MN>
+  c?: Partial<ModuleConfig<MN>>
 }
 
 // export interface LoadableModule {

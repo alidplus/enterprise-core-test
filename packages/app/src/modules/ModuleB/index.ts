@@ -6,6 +6,9 @@ import { ModuleBConfig } from './config'
 const Component = lazy(() => delayForDemo(import('./Component')))
 
 export const moduleB: ModuleDefination<ModuleBConfig> = {
-  title: 'به زودی',
+  title: 'Module B',
   Component,
+  defaultConfig: {
+    content: 'Module B is about showing some demo content',
+  },
 }

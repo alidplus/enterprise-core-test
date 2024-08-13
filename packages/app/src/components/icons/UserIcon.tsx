@@ -1,7 +1,11 @@
-import { IconSvgProps } from './type';
+import { IconSvgProps } from './type'
 
 const UserIcon = ({
-  fill = 'currentColor', size, height, width, ...props
+  fill = 'currentColor',
+  size,
+  height,
+  width,
+  ...props
 }: IconSvgProps) => {
   return (
     <svg
@@ -25,16 +29,18 @@ const UserIcon = ({
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
-  );
-};
+  )
+}
 
 export default UserIcon

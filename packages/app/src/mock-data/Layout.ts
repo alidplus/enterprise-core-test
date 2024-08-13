@@ -13,9 +13,9 @@ const sidebarData: SidebarMenu = {
         { label: 'Messages', icon: 'Message', uri: '/messages' },
         { label: 'Security', icon: 'Security', uri: '/security' },
         { label: 'Settings', icon: 'Settings', uri: '/settings' },
-        { label: 'Module A', icon: 'Notifications', uri: '/module-a' },
-        { label: 'Module B', icon: 'Passwords', uri: '/module-b' },
-        { label: 'Module C', icon: 'Goals', uri: '/module-c' },
+        { label: 'Module A', icon: 'Goals', uri: '/module-a' },
+        { label: 'Module B', icon: 'Goals', uri: '/module-b' },
+        { label: 'Registration', icon: 'Goals', uri: '/register' },
         { label: 'Module X', icon: 'Goals', uri: '/module-x' },
       ],
     },
@@ -27,7 +27,7 @@ export async function getSidebarData(): Promise<SidebarMenu> {
 }
 
 const userDate: UserData = {
-  name: 'Alexis Enache',
+  fullName: 'Alexis Enache',
   email: 'alexis81@gmail.com',
   avatar: 'https://i.ibb.co/L1LQtBm/Ellipse-1.png',
 }

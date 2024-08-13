@@ -1,11 +1,11 @@
-import { SVGProps, Suspense } from "react";
+import { SVGProps, Suspense } from 'react'
 import * as icons from '.'
-import EmptyIcon from "./EmptyIcon";
+import EmptyIcon from './EmptyIcon'
 
 export type IconNames = keyof typeof icons
 
 interface LazyIconProps extends SVGProps<SVGSVGElement> {
-  size?: number,
+  size?: number
   name?: IconNames
 }
 

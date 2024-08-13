@@ -1,7 +1,11 @@
-import { IconSvgProps } from './type';
+import { IconSvgProps } from './type'
 
 const NotificationsIcon = ({
-  fill = 'currentColor', size, height, width, ...props
+  fill = 'currentColor',
+  size,
+  height,
+  width,
+  ...props
 }: IconSvgProps) => {
   return (
     <svg
@@ -25,16 +29,18 @@ const NotificationsIcon = ({
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
         <path
           d="M17 10C18.6569 10 20 8.65685 20 7C20 5.34314 18.6569 4 17 4C15.3431 4 14 5.34314 14 7C14 8.65685 15.3431 10 17 10Z"
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round" />
+          strokeLinejoin="round"
+        />
       </g>
     </svg>
-  );
-};
+  )
+}
 
 export default NotificationsIcon

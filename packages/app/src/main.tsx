@@ -16,7 +16,8 @@ createRoot(document.getElementById('root')!).render(
         <Suspense fallback={<BrandLoading />}>
           <RouterProvider router={router} />
         </Suspense>
-      </Provider>,
+      </Provider>
+      ,
     </NextUIProvider>
   </StrictMode>
 )
