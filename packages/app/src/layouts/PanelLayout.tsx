@@ -6,18 +6,18 @@ import {
   DropdownTrigger,
   Navbar,
   NavbarBrand,
-  NavbarContent
+  NavbarContent,
 } from '@nextui-org/react'
 import { Fragment, Suspense } from 'react'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import BrandLoading from '../components/Loading'
 import { UserCard } from '../components/UserCard'
 import { Sidebar } from '../components/sidebar'
-import { LayoutData } from '../types/loader'
+import { LayoutRouterData } from '../types/loader'
 
-function useLayoutData(): LayoutData {
+function useLayoutData(): LayoutRouterData {
   const data = useLoaderData()
-  return data as LayoutData
+  return data as LayoutRouterData
 }
 
 export default function PanelLayout() {

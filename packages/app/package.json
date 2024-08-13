@@ -16,6 +16,7 @@
     "@nextui-org/theme": "^2.2.9",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.24",
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",
@@ -39,5 +40,10 @@
   },
   "optionalDependencies": {
     "nextui-cli": "^0.3.4"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

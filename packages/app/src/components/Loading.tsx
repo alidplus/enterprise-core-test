@@ -1,10 +1,10 @@
-import { CircularProgress, Progress } from "@nextui-org/react";
+import { CircularProgress, Progress } from '@nextui-org/react'
 
 export default function BrandLoading() {
   return (
-    <div className="absolute inset-0 w-full h-full flex justify-center align-middle m-auto">
-      <div className="flex flex-col justify-center align-middle min-w-fit gap-1 m-auto">
-        <div className="flex justify-center align-middle min-w-fit gap-1 m-auto">
+    <div className="absolute inset-0 m-auto flex h-full w-full justify-center align-middle">
+      <div className="m-auto flex min-w-fit flex-col justify-center gap-1 align-middle">
+        <div className="m-auto flex min-w-fit justify-center gap-1 align-middle">
           <div>Enterprise</div>
           <div className="font-bold">Core</div>
         </div>

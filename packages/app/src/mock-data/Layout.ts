@@ -1,5 +1,5 @@
-import { SidebarMenu } from "../types/sidebar"
-import { UserData } from "../types/user"
+import { SidebarMenu } from '../types/sidebar'
+import { UserData } from '../types/user'
 import * as Icons from '../components/icons'
 
 const sidebarData: SidebarMenu = {
@@ -14,9 +14,10 @@ const sidebarData: SidebarMenu = {
         { label: 'Messages', icon: Icons.MessageIcon, uri: '/messages' },
         { label: 'Security', icon: Icons.SecurityIcon, uri: '/security' },
         { label: 'Settings', icon: Icons.SettingsIcon, uri: '/settings' },
-        { label: 'Notifications', icon: Icons.NotificationsIcon, uri: '/notifications' },
-        { label: 'Passwords', icon: Icons.PasswordsIcon, uri: '/passwords' },
-        { label: 'Goals', icon: Icons.GoalsIcon, uri: '/goals' },
+        { label: 'Module A', icon: Icons.NotificationsIcon, uri: '/module-a' },
+        { label: 'Module B', icon: Icons.PasswordsIcon, uri: '/module-b' },
+        { label: 'Module C', icon: Icons.GoalsIcon, uri: '/module-c' },
+        { label: 'Module X', icon: Icons.GoalsIcon, uri: '/module-x' },
       ],
     },
   ],

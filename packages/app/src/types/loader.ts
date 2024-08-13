@@ -1,8 +1,12 @@
-import { SidebarMenu } from "./sidebar";
-import { UserData } from "./user";
+import { PathBluePrint } from './modules'
+import { SidebarMenu } from './sidebar'
+import { UserData } from './user'
 
-
-export interface LayoutData {
-  sidebarData: SidebarMenu,
+export interface LayoutRouterData {
+  sidebarData: SidebarMenu
   userData: UserData
+}
+
+export interface BluePrintRouterData {
+  bluePrintData: PathBluePrint | null
 }

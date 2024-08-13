@@ -1,8 +1,17 @@
-"client side"
+'client side'
 
-import { Button, ButtonGroup, Card, CardBody, CardFooter, CardHeader, Code, Divider } from "@nextui-org/react";
-import { ReactNode } from "react";
-import { useNavigate, useRouteError } from "react-router-dom";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Code,
+  Divider,
+} from '@nextui-org/react'
+import { ReactNode } from 'react'
+import { useNavigate, useRouteError } from 'react-router-dom'
 
 export function RouterErrorBoundary() {
   const navigate = useNavigate()
@@ -38,8 +47,12 @@ export function RouterErrorBoundary() {
       <Divider />
       <CardFooter>
         <ButtonGroup>
-          <Button color="success" onClick={() => navigate('/')}>Home</Button>
-          <Button color="danger" onClick={reload}>Reload</Button>
+          <Button color="success" onClick={() => navigate('/')}>
+            Home
+          </Button>
+          <Button color="danger" onClick={reload}>
+            Reload
+          </Button>
         </ButtonGroup>
       </CardFooter>
     </Card>
