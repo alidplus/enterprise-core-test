@@ -1,17 +1,22 @@
 import { Button, Input } from '@nextui-org/react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { UserInput } from '../../../types/user'
+import { LegalUserInput, UserInput } from '../../../types/user'
+import { addUser } from '../../../store/slices/registration'
+import { useDispatch } from 'react-redux'
 
 export default function RegistrationForm() {
+  const dispatch = useDispatch()
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
-  } = useForm<UserInput>({ defaultValues: { type: 'legal' } })
-  const onSubmit: SubmitHandler<UserInput> = (data) =>
-    console.log('onSubmit', data)
-
+  } = useForm<LegalUserInput>({ defaultValues: { type: 'legal' } })
+  const onSubmit: SubmitHandler<UserInput> = (data) => {
+    console.log('onSubmit individual', data)
+    dispatch(addUser(data))
+    reset()
+  }
   return (
     <form
       className="flex max-w-fit flex-col gap-5 p-3"

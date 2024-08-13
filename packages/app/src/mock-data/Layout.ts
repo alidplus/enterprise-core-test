@@ -14,7 +14,7 @@ const sidebarData: SidebarMenu = {
         { label: 'Security', icon: 'Security', uri: '/security' },
         { label: 'Settings', icon: 'Settings', uri: '/settings' },
         { label: 'Module A', icon: 'Goals', uri: '/module-a' },
-        { label: 'Module B', icon: 'Goals', uri: '/module-b' },
+        { label: 'Registered Users', icon: 'Goals', uri: '/registered-users' },
         { label: 'Registration', icon: 'Goals', uri: '/register' },
         { label: 'Module X', icon: 'Goals', uri: '/module-x' },
       ],

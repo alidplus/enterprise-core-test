@@ -1,6 +1,6 @@
 import { ComponentType } from 'react'
 import { ModuleAConfig } from './ModuleA/config'
-import { ModuleBConfig } from './ModuleB/config'
+import { RegisteredUsersModuleConfig } from './RegisteredUsers/config'
 import { RegistrationFormModuleConfig } from './RegistrationForm/config'
 
 import * as moduleDefs from '.'
@@ -33,13 +33,15 @@ export interface ModuleDefination<C extends ModuleConfigBase>
 
 export type ModuleConfig<MN extends ModuleNames> = MN extends 'moduleA'
   ? ModuleAConfig
-  : MN extends 'moduleB'
-    ? ModuleBConfig
+  : MN extends 'registeredUsersModule'
+    ? RegisteredUsersModuleConfig
     : MN extends 'registrationFormModule'
       ? RegistrationFormModuleConfig
       : never
 
-export interface ModuleBluePrint<MN extends ModuleNames = ModuleNames> {
+export interface RegisteredUsersModuleluePrint<
+  MN extends ModuleNames = ModuleNames,
+> {
   t: MN
   c?: Partial<ModuleConfig<MN>>
 }

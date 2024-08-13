@@ -23,6 +23,20 @@ const moduleAMockSidebar: SidebarMenu = {
   ],
 }
 
+const registredUsersModuleSidebar: SidebarMenu = {
+  links: [],
+  groups: [
+    {
+      label: 'Registered Users',
+      links: [
+        { label: 'View All', uri: '/registered-users' },
+        { label: 'View Individuals', uri: '/registered-users?type=individual' },
+        { label: 'View Companies', uri: '/registered-users?type=legal' },
+      ],
+    },
+  ],
+}
+
 const registrationModuleSidebar: SidebarMenu = {
   links: [],
   groups: [
@@ -53,10 +67,17 @@ export async function getPathBluePrint(
         },
       },
     }
-  else if (moduleUri === 'module-b')
+  else if (moduleUri === 'registered-users')
     return {
       path,
-      module: { t: 'moduleB', c: { label: 'hello from module B', version } },
+      module: {
+        t: 'registeredUsersModule',
+        c: {
+          label: 'hello from Registered Users',
+          version,
+          sidebar: registredUsersModuleSidebar,
+        },
+      },
     }
   else if (moduleUri === 'register')
     return {

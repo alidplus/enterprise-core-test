@@ -1,3 +1,3 @@
 export * from './ModuleA'
-export * from './ModuleB'
+export * from './RegisteredUsers'
 export * from './RegistrationForm'

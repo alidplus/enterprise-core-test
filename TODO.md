@@ -14,7 +14,7 @@
 - [x] The framework will provide a view panel where external react applications can be loaded dynamically based on configuration.
 - [x] The top level menu updates when a new application is loaded using the applications preferred menu config.
 - [x] The application can load a UI component dynamically based on a configuration asset (e.g. json) that specifies the version of the component. e.g. RegistrationForm v1 and RegsitrationForm v2
-- [ ] The dynamically loaded applications need to be able to interact with each other without direct communication, using redux within the front end framework/wrapper.
+- [x] The dynamically loaded applications need to be able to interact with each other without direct communication, using redux within the front end framework/wrapper.
 
 ## Bonus tasks:
 

@@ -1,8 +1,8 @@
-import { ModuleBluePrint } from '../modules/type'
+import { RegisteredUsersModuleluePrint } from '../modules/type'
 
 export interface PathBluePrint {
   path: string
-  module: ModuleBluePrint
+  module: RegisteredUsersModuleluePrint
 }
 
 export type AppBluePrints = Array<PathBluePrint>
