@@ -1,5 +1,5 @@
 import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react'
-import * as Icons from '../components/icons'
+import LazyIcon from '../components/icons/LazyIcon'
 
 export default function Dahsboard() {
   return (
@@ -7,7 +7,7 @@ export default function Dahsboard() {
       <CardBody>
         <CardHeader className="flex gap-3">
           <div className="flex justify-center gap-1 align-middle">
-            <Icons.DashboardIcon />
+            <LazyIcon name='Dashboard' />
             <h3 className="text-xl font-bold">Dahsboard</h3>
           </div>
         </CardHeader>

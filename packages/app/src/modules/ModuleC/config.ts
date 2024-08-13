@@ -1,5 +1,5 @@
-import { ModuleComputedProps } from '../type'
+import { ModuleConfigBase } from '../type'
 
-export interface ModuleCConfig extends ModuleComputedProps {
+export interface ModuleCConfig extends ModuleConfigBase {
   title: string
 }

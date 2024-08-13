@@ -4,6 +4,7 @@ import { ModuleBConfig } from './ModuleB/config'
 import { ModuleCConfig } from './ModuleC/config'
 
 import * as moduleDefs from '.'
+import { SidebarMenu } from '../types/sidebar'
 
 export type ModuleDefs = typeof moduleDefs
 export type ModuleNames = keyof ModuleDefs
@@ -12,9 +13,11 @@ export interface ModuleDefinationBase {
   title: string
 }
 
-export interface ModuleConfigBase {}
+export interface ModuleConfigBase {
+  sidebar?: SidebarMenu
+}
 
-export interface ModuleComputedProps {}
+export interface ModuleComputedProps { }
 
 export interface ModuleComponentProps<C extends ModuleConfigBase>
   extends ModuleComputedProps {
@@ -29,10 +32,10 @@ export interface ModuleDefination<C extends ModuleConfigBase>
 export type ModuleConfig<MN extends ModuleNames> = MN extends 'moduleA'
   ? ModuleAConfig
   : MN extends 'moduleB'
-    ? ModuleBConfig
-    : MN extends 'moduleC'
-      ? ModuleCConfig
-      : never
+  ? ModuleBConfig
+  : MN extends 'moduleC'
+  ? ModuleCConfig
+  : never
 
 export interface ModuleBluePrint<MN extends ModuleNames = ModuleNames> {
   t: MN

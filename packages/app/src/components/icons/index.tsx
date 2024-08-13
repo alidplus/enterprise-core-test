@@ -1,0 +1,16 @@
+import { lazy } from "react";
+
+export const Camera = lazy(async () => import('./CameraIcon'))
+export const ChevronUp = lazy(async () => import('./ChevronUpIcon'))
+export const Close = lazy(async () => import('./CloseIcon'))
+export const Config = lazy(async () => import('./ConfigIcon'))
+export const Dashboard = lazy(async () => import('./DashboardIcon'))
+export const Empty = lazy(async () => import('./EmptyIcon'))
+export const Goals = lazy(async () => import('./GoalsIcon'))
+export const Message = lazy(async () => import('./MessageIcon'))
+export const Notifications = lazy(async () => import('./NotificationsIcon'))
+export const Open = lazy(async () => import('./OpenIcon'))
+export const Passwords = lazy(async () => import('./PasswordsIcon'))
+export const Security = lazy(async () => import('./SecurityIcon'))
+export const Settings = lazy(async () => import('./SettingsIcon'))
+export const User = lazy(async () => import('./UserIcon'))

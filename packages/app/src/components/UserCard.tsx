@@ -1,5 +1,5 @@
-import * as Icons from './icons'
 import { UserData } from '../types/user'
+import LazyIcon from './icons/LazyIcon'
 
 interface UserCardProps {
   user: UserData
@@ -21,7 +21,7 @@ export function UserCard(props: UserCardProps) {
           </p>
         </div>
       </div>
-      <Icons.ConfigIcon />
+      <LazyIcon name='Config' />
     </div>
   )
 }

@@ -5,7 +5,7 @@
 - [x] Init UI using TailwindCSS+NextUI
 - [x] Design dry UI
 - [ ] atomic design system
-- [ ] integrate redux
+- [x] integrate redux
 - [x] integrate router
 - [ ] ~~mock api using ???~~
 
@@ -13,7 +13,7 @@
 
 - [x] The framework will provide a UI component that displays a common menu that can be updated dynamically using configuration assets (e.g. json)
 - [x] The framework will provide a view panel where external react applications can be loaded dynamically based on configuration.
-- [ ] The top level menu updates when a new application is loaded using the applications preferred menu config.
+- [x] The top level menu updates when a new application is loaded using the applications preferred menu config.
 - [ ] The application can load a UI component dynamically based on a configuration asset (e.g. json) that specifies the version of the component. e.g. RegistrationForm v1 and RegsitrationForm v2
 - [ ] The dynamically loaded applications need to be able to interact with each other without direct communication, using redux within the front end framework/wrapper.
 
@@ -27,4 +27,4 @@
   - [x] pritter
   - [ ] eslint
 - [ ] dark mode
-- [ ] General Icon component to pass icon name as string
+- [x] General Icon component to pass icon name as string

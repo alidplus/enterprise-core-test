@@ -1,10 +1,13 @@
 import clsx from 'clsx'
 import { PropsWithChildren, useState } from 'react'
-import { ChevronUpIcon } from '../components/icons'
 
 import { useNavigate } from 'react-router-dom'
 import { tv } from 'tailwind-variants'
 import { MenuGroup, MenuItem, SidebarMenu } from '../types/sidebar'
+import { useAppSelector } from '../store/hooks'
+import { selectSidebarLinks, selectSidebarGroups } from '../store/slices/sidebar'
+import ChevronUpIcon from './icons/ChevronUpIcon'
+import LazyIcon from './icons/LazyIcon'
 
 const menuButton = tv({
   base: 'flex w-full items-center space-x-6 rounded justify-start',
@@ -18,7 +21,6 @@ const menuButton = tv({
 })
 
 export function MenuLink(props: MenuItem) {
-  const Icon = props.icon
   const navigate = useNavigate()
   const handleClick = () => {
     if (props.uri) navigate(props.uri)
@@ -28,7 +30,7 @@ export function MenuLink(props: MenuItem) {
       onClick={props.onClick ?? handleClick}
       className={menuButton({ isMain: props.main })}
     >
-      {Icon ? <Icon /> : null}
+      <LazyIcon name={props.icon} />
       <p className="text-base leading-4">{props.label}</p>
     </button>
   )
@@ -59,11 +61,13 @@ export function SidebarMenuGroup(props: MenuGroup) {
   )
 }
 
-interface SidebarProps extends SidebarMenu {
+interface SidebarProps {
   visible?: boolean
 }
 
 export function Sidebar(props: PropsWithChildren<SidebarProps>) {
+  const links = useAppSelector(selectSidebarLinks)
+  const groups = useAppSelector(selectSidebarGroups)
   return (
     <div
       className={clsx(
@@ -79,11 +83,11 @@ export function Sidebar(props: PropsWithChildren<SidebarProps>) {
         className="flex h-full w-full flex-col items-start justify-start sm:w-64 xl:rounded-r"
       >
         <div className="mt-6 flex w-full flex-col items-center justify-start space-y-3 border-b border-gray-600 pb-5 pl-4">
-          {props.links.map((link) => (
+          {links.map((link) => (
             <MenuLink key={link.label} {...link} main />
           ))}
         </div>
-        {props.groups.map((group) => (
+        {groups.map((group) => (
           <SidebarMenuGroup key={group.label} {...group} default />
         ))}
         <div className="h-full"></div>

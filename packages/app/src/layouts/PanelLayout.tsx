@@ -8,12 +8,14 @@ import {
   NavbarBrand,
   NavbarContent,
 } from '@nextui-org/react'
-import { Fragment, Suspense } from 'react'
+import { Fragment, Suspense, useEffect } from 'react'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import BrandLoading from '../components/Loading'
 import { UserCard } from '../components/UserCard'
-import { Sidebar } from '../components/sidebar'
+import { Sidebar } from '../components/Sidebar'
 import { LayoutRouterData } from '../types/loader'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { bindMenu, selectSidebarGroups, selectSidebarLinks } from '../store/slices/sidebar'
 
 function useLayoutData(): LayoutRouterData {
   const data = useLoaderData()
@@ -22,6 +24,12 @@ function useLayoutData(): LayoutRouterData {
 
 export default function PanelLayout() {
   const { sidebarData, userData } = useLayoutData()
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(bindMenu({ key: "@@APP", menu: sidebarData }))
+  }, [sidebarData])
+
 
   return (
     <Fragment>
@@ -70,7 +78,7 @@ export default function PanelLayout() {
         </NavbarContent>
       </Navbar>
       <div className="flex h-[calc(100dvh_-_4rem_-_1px)]">
-        <Sidebar {...sidebarData} visible>
+        <Sidebar visible>
           <UserCard user={userData} />
         </Sidebar>
         <div className="relative w-full overflow-y-auto p-5">

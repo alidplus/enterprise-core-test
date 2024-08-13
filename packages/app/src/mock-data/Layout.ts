@@ -1,23 +1,22 @@
 import { SidebarMenu } from '../types/sidebar'
 import { UserData } from '../types/user'
-import * as Icons from '../components/icons'
 
 const sidebarData: SidebarMenu = {
   links: [
-    { label: 'Dashboard', icon: Icons.DashboardIcon, uri: '/' },
-    { label: 'Users', icon: Icons.UserIcon, uri: '/users' },
+    { label: 'Dashboard', icon: 'Dashboard', uri: '/' },
+    { label: 'Users', icon: 'User', uri: '/users' },
   ],
   groups: [
     {
       label: 'Profile Overview',
       links: [
-        { label: 'Messages', icon: Icons.MessageIcon, uri: '/messages' },
-        { label: 'Security', icon: Icons.SecurityIcon, uri: '/security' },
-        { label: 'Settings', icon: Icons.SettingsIcon, uri: '/settings' },
-        { label: 'Module A', icon: Icons.NotificationsIcon, uri: '/module-a' },
-        { label: 'Module B', icon: Icons.PasswordsIcon, uri: '/module-b' },
-        { label: 'Module C', icon: Icons.GoalsIcon, uri: '/module-c' },
-        { label: 'Module X', icon: Icons.GoalsIcon, uri: '/module-x' },
+        { label: 'Messages', icon: 'Message', uri: '/messages' },
+        { label: 'Security', icon: 'Security', uri: '/security' },
+        { label: 'Settings', icon: 'Settings', uri: '/settings' },
+        { label: 'Module A', icon: 'Notifications', uri: '/module-a' },
+        { label: 'Module B', icon: 'Passwords', uri: '/module-b' },
+        { label: 'Module C', icon: 'Goals', uri: '/module-c' },
+        { label: 'Module X', icon: 'Goals', uri: '/module-x' },
       ],
     },
   ],

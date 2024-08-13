@@ -1,11 +1,11 @@
-import { ComponentType } from 'react'
+import { IconNames } from '../components/icons/LazyIcon'
 
 export interface MenuItem {
   label: string
   main?: true
   uri?: string
   onClick?: () => void
-  icon?: ComponentType
+  icon?: IconNames
 }
 
 export interface MenuGroup {
