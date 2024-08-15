@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import sidebarReducer from './slices/sidebar'
 import registrationReducer from './slices/registration'
+import designReducer from './slices/design'
 
 export const store = configureStore({
   reducer: {
     sidebar: sidebarReducer,
     registration: registrationReducer,
+    design: designReducer,
   },
 })
 

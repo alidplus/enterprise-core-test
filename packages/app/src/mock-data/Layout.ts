@@ -4,7 +4,7 @@ import { UserData } from '../types/user'
 const sidebarData: SidebarMenu = {
   links: [
     { label: 'Dashboard', icon: 'Dashboard', uri: '/' },
-    { label: 'Users', icon: 'User', uri: '/users' },
+    { label: 'Design The Core', icon: 'Diagram', uri: '/design' },
   ],
   groups: [
     {

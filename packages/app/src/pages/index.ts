@@ -5,6 +5,7 @@ import { getSidebarData, getUserDate } from '../mock-data/Layout'
 import { getPathBluePrint } from '../mock-data/module'
 import PanelLayout from '../layouts/PanelLayout'
 import { RouterErrorBoundary } from './ErrorBoundary'
+import Design from './Design'
 
 const Dahsboard = lazy(() => delayForDemo(import('./Dahsboard')))
 const Users = lazy(() => delayForDemo(import('./Users')))
@@ -32,8 +33,8 @@ const router = createBrowserRouter([
         Component: Dahsboard,
       },
       {
-        path: '/users',
-        Component: Users,
+        path: '/design',
+        Component: Design,
       },
       {
         path: '/messages',

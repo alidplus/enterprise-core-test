@@ -13,7 +13,6 @@ export default function RegistrationForm() {
     formState: { errors },
   } = useForm<LegalUserInput>({ defaultValues: { type: 'legal' } })
   const onSubmit: SubmitHandler<UserInput> = (data) => {
-    console.log('onSubmit individual', data)
     dispatch(addUser(data))
     reset()
   }

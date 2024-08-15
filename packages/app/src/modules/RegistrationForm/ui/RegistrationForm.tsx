@@ -13,7 +13,6 @@ export default function RegistrationForm() {
     formState: { errors },
   } = useForm<IndividualUserInput>({ defaultValues: { type: 'individual' } })
   const onSubmit: SubmitHandler<UserInput> = (data) => {
-    console.log('onSubmit individual', data)
     dispatch(addUser(data))
     reset()
   }

@@ -18,7 +18,7 @@
 
 ## Bonus tasks:
 
-- [ ] One UI component will render a react-flow diagram with custom nodes that embed sub-diagram
+- [x] One UI component will render a react-flow diagram with custom nodes that embed sub-diagram
 
 ## Extra taks:
 

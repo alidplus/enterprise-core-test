@@ -24,9 +24,6 @@ export default function Component(
     return urlParams.get('type') || undefined
   }, [search])
   const registration = useAppSelector(selectRegistrations(type))
-  useEffect(() => {
-    console.log('registration', { registration })
-  }, [registration])
 
   return (
     <Table aria-label="Example static collection table">
