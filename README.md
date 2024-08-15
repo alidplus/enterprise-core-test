@@ -31,3 +31,18 @@ yarn install
 ```bash
 yarn dev
 ```
+
+
+## Final Report
+Every project is full of new challenges and experiences. Here, I like to share my experiences about doing this project:
+
+### What and Why
+Here, I note the "What and Why" for some of the things I've used in this project:
+- vite: Fastest frontend bundler serving ES6 inside the browser
+- react-router-dom v6: The most popular router component. with a lot of awesome features included like lazy load, async loader
+- tailwindCSS: tiny size CSS library with atomic CSS classes and the easiest way of making customised UI
+  
+### New Experiences
+I usually use some new package inside every test project:
+- NextUI: The best UI Kit I've ever used! It has built on top of 'tailwind-variant' and 'tailwindCSS'. it's very flexible, customizable, easy to use and well-documented. Every Component inside the NextUI is basically a tailwind-variant, so, it is easy to extend and develop your own components using this ui-kit.
+- ReactFlow: A new way of designing "No Code" applications with the possibility of defining your own nodes and logic! It is weird at first glance, but after a day you find out how it is well-documented and simple to use. the website is full of awesome things built on top of it (min blowing!)
